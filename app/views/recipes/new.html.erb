@@ -1,21 +1,12 @@
 <h1>Ingredient List</h1>
-<form action="#">
-    Your name:<br><br>
-    <input type="text" name="yourname"><br><br>
-    Ingredient 1:<br><br>
-    <select name="ingredients">
-        <option value="sugar">Sugar</option>
-        <option value="carbohydrates">Carbohydrates</option>
-    </select><br><br>
-    Ingredient 2:<br><br>
-    <select name="ingredients">
-        <option value="sugar">Sugar</option>
-        <option value="carbohydrates">Carbohydrates</option>
-    </select><br><br>
-    Ingredient 3:<br><br>
-    <select name="ingredients">
-        <option value="sugar">Sugar</option>
-        <option value="carbohydrates">Carbohydrates</option>
-    </select><br><br>
-    <input type="submit" value="Generate">
-</form>
+<%= form_for :recipe do |f| %>
+    <p>
+        <%= f.label :your_name %><br>
+        <%= f.text_field :your_name %><br>
+    </p>
+    
+    <p>
+        <%= f.label :ingredient_1 %><br>
+    </p>
+    
+<% end %>
